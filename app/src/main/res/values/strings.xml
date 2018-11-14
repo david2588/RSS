@@ -1,0 +1,6 @@
+<resources>
+  <string name="app_name">RSS</string>
+  <string name="main_title_toolbar">RSS</string>
+  <string name="detail_title_toolbar">RSS Detail</string>
+  <string name="show_button">Ver en el navegador</string>
+</resources>

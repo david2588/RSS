@@ -1,0 +1,32 @@
+<resources>
+  <dimen name="fab_margin">16dp</dimen>
+
+  <dimen name="padding_xxsmall">2dp</dimen>
+  <dimen name="padding_xsmall">4dp</dimen>
+  <dimen name="padding_small">8dp</dimen>
+  <dimen name="padding_default">16dp</dimen>
+  <dimen name="padding_large">24dp</dimen>
+  <dimen name="padding_xlarge">32dp</dimen>
+  <dimen name="padding_xxlarge">40dp</dimen>
+
+  <dimen name="icon_size_xsmall">12dp</dimen>
+  <dimen name="icon_size_small">16dp</dimen>
+  <dimen name="icon_size_default">24dp</dimen>
+  <dimen name="icon_size_large">30dp</dimen>
+
+  <dimen name="text_h1">28sp</dimen>
+  <dimen name="text_h2">22sp</dimen>
+  <dimen name="text_h3">18sp</dimen>
+  <dimen name="text_h4">14sp</dimen>
+  <dimen name="text_h5">10sp</dimen>
+
+  <dimen name="margin_6">6dp</dimen>
+  <dimen name="margin_8">8dp</dimen>
+  <dimen name="margin_10">10dp</dimen>
+  <dimen name="margin_12">12dp</dimen>
+  <dimen name="margin_20">20dp</dimen>
+  <dimen name="margin_30">30dp</dimen>
+
+  <dimen name="tab_corner_radious">4dp</dimen>
+
+</resources>
