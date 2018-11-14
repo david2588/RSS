@@ -13,21 +13,24 @@ import kotlinx.android.synthetic.main.item_rss.view.dateTextview
 import kotlinx.android.synthetic.main.item_rss.view.descriptionTextView
 import kotlinx.android.synthetic.main.item_rss.view.imageImageView
 import kotlinx.android.synthetic.main.item_rss.view.titleTextView
+import kotlin.properties.Delegates
 
 typealias Listener = (Rss) -> Unit
 
-class RssListAdapter(private val listItem: List<Rss>, private val listener: Listener)
+class RssListAdapter(listItem: MutableList<Rss>, private val listener: Listener)
   : RecyclerView.Adapter<RssListAdapter.ItemViewHolder>() {
+
+  var items: MutableList<Rss> by Delegates.observable(listItem) { _, _, _ -> this.notifyDataSetChanged() }
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
     val itemViewHolder = parent.inflate(R.layout.item_rss)
     return ItemViewHolder(itemViewHolder)
   }
 
-  override fun getItemCount() = listItem.size
+  override fun getItemCount() = items.size
 
   override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-    holder.bind(listItem[position])
+    holder.bind(items[position])
   }
 
   inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
