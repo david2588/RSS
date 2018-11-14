@@ -14,16 +14,25 @@ class MainPresenter constructor(
 ) {
 
   val view: MainView? by weak(mainView)
+  lateinit var list: List<Rss>
 
   fun viewReady() {
     execute(getListInteractor, Unit) { response ->
       view?.let { view ->
-        response.rss?.let { view.displayList(it) }
+
+        response.rss?.let {
+          list = response.rss
+          view.displayList(it)
+        }
       }
     }
   }
 
   fun clickItem(rss: Rss) {
     router.navigateToDetail(rss)
+  }
+
+  fun sortList(text: String) {
+    list.let { view?.updateList(list.filter { it.title!!.contains(text) }) }
   }
 }
